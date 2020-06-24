@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: 
+    url("images/pattern-bg.svg"),
+    url("images/pattern-quotes.svg"),
+    url("images/pattern-curve.svg");
+  background-position:
+    top 8% right 16%,
+    top 20% left 18%,
+    bottom 15% left;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 100vw);
+}
+
+.person {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: 
+    ". image"
+    "quote image"
+    "detail image";
+  padding: 5% 10% 15% 10%;
+}
+
+.person-image {
+  grid-area: image;
+  background-color: transparent;
+}
+
+
+.person-image img {
+  object-fit: fill;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+  filter: brightness(105%) saturate(140%) contrast(105%) ;
+}
+
+
+
+.person-quote {
+  grid-area: quote;
+  width: 115%;
+  z-index: 2;
+  font-size: 2.15rem;
+  font-weight: 300;
+  color: hsl(240, 38%, 20%);
+}
+
+.person-detail {
+  grid-area: detail;
+  display: flex;
+}
+
+.person-detail h2 {
+  color: hsl(240, 38%, 20%);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.person-detail h5 {
+  padding-left: 2%;
+  font-weight: 500;
+  color: hsl(240, 18%, 77%);
+  font-size: 1.2rem;
+}
