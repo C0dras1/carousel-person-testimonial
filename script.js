@@ -1,13 +1,18 @@
-function plusSlides(n) {
-  clearInterval(myTimer);
-  if (n < 0) {
-    showSlides(slideIndex -= 1);
-  } else {
-    showSlides(slideIndex += 1);
-  }
-  if (n === -1) {
-    myTimer = setInterval(function() {plusSlides(n + 2)}, 4000);
-  } else {
-    myTimer = setInterval(function() {plusSlides(n + 1)}, 4000);
-  }
-}
+const btnPrev = document.getElementById('btnprev');
+const btnNext = document.getElementById('btnnext');
+const { body } = document;
+
+
+alert('connected');
+
+btnPrev.addEventListener('click', e => {
+  e.preventDefault;
+  body.classList.remove('second');
+  body.classList.add('first');
+})
+
+btnNext.addEventListener('click', e => {
+  e.preventDefault;
+  body.classList.remove('first');
+  body.classList.add('second');
+})

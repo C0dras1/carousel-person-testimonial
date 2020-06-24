@@ -26,7 +26,27 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 100vw);
 }
+/* Classes for carousel btn effect */
+/* Next */
+.second .per1 {
+  transform: translateX(-100vw);
+  transition: all 0.4s ease-in;
+}
+.second .per2 {
+  transform: translateX(-100vw);
+  transition: all 0.4s ease-in;
+}
 
+.first .per1 {
+  transform: translateX(0);
+  transition: all 0.4s ease-in;
+}
+.first .per2 {
+  transform: translateX(0);
+  transition: all 0.4s ease-in;
+}
+/* Prev */
+/* End of scroll */
 .person {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -38,10 +58,10 @@ body {
   padding: 5% 10% 15% 10%;
 }
 
+
 .person-image {
   grid-area: image;
   background-color: transparent;
-  align-self: center;
 }
 
 
@@ -74,8 +94,6 @@ body {
   cursor: pointer;
 }
 
-.btn-next {
-}
 
 
 
