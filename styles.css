@@ -86,15 +86,24 @@ body {
     2px 10px 12px rgba(0, 0, 0, 0.05);
 }
 
-.btn {
+button {
   background-color: transparent;
   border: transparent;
   font-size: 1.5rem;
   font-weight: 300;
   cursor: pointer;
+  color: hsl(240, 18%, 77%);
 }
 
+.first #btnnext:active,
+.first #btnnext:hover {
+  color: hsl(240, 38%, 20%);
+}
 
+.second #btnprev:active,
+.second #btnprev:hover {
+  color: hsl(240, 38%, 20%);
+}
 
 
 .person-quote {
@@ -124,7 +133,7 @@ body {
   font-size: 1.2rem;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 900px) {
   body {
     background-image: 
       url("images/pattern-bg.svg"),
@@ -138,6 +147,7 @@ body {
     background-size: 
       85%,
       14%;
+    overflow-y: visible;
   }
   
   .person {
